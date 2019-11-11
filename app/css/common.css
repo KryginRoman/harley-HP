@@ -1,0 +1,364 @@
+* {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6, ul, p, figure, body {
+  padding: 0;
+  margin: 0; }
+
+ul {
+  list-style: none; }
+
+html {
+  font-size: 10px; }
+
+body {
+  background-color: #232323;
+  color: #fff; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1380px;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.small-container {
+  margin: 0 auto;
+  max-width: 1090px;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.link, .button {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+  transition: all .4s ease-in-out; }
+  .link:hover, .link:focus, .button:hover, .button:focus {
+    color: #004cff; }
+
+.button {
+  border: 5px solid transparent;
+  line-height: 1;
+  text-transform: uppercase; }
+
+.cover {
+  background-color: rgba(0, 76, 255, 0.75);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%; }
+
+.list {
+  display: flex;
+  flex-wrap: wrap; }
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+.header__pannel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Teko-SemiBold";
+  font-size: 2.3rem; }
+
+.header__nav {
+  color: #404040; }
+  .header__nav-item {
+    position: relative; }
+    .header__nav-item:not(:last-child)::after {
+      background-color: #004cff;
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -5px;
+      height: 10px;
+      width: 10px;
+      transform: translateY(-50%) rotate(45deg); }
+  .header__nav-link {
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px; }
+  .header__nav-button {
+    background-color: #004cff;
+    padding-bottom: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 20px; }
+    .header__nav-button:hover, .header__nav-button:focus {
+      background-color: transparent;
+      border-color: #004cff; }
+
+@media screen and (max-width: 1200px) {
+  .header__pannel {
+    font-size: 2rem; }
+  .header__nav-link {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .header__nav-button {
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px; } }
+
+.header {
+  position: relative; }
+  .header__container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    padding-top: 40px;
+    transform: translateX(-50%);
+    width: 1090px; }
+  .header__slider-item {
+    background-size: cover;
+    background-position: center;
+    height: 100vh; }
+  .header__slider-item[data-order="1"] {
+    background-image: url(../images/slider_bg/slider-bg1.jpg); }
+  .header__slider-content {
+    font-family: "Teko-Bold";
+    font-size: 6.8rem;
+    letter-spacing: 2.73px;
+    line-height: 1.05;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+  .header__slider-button-wrapper {
+    padding-top: 65px; }
+  .header__slider-button {
+    border-color: #fff;
+    font-family: "Montserrat-SemiBold";
+    font-size: 1.8rem;
+    padding: 20px 40px; }
+    .header__slider-button:hover {
+      background-color: #fff;
+      border-color: #004cff; }
+  .header__arrow-top-wrapper {
+    position: absolute;
+    bottom: 125px;
+    right: 100px; }
+  .header__arrow-top {
+    background-color: #004cff;
+    border-radius: 8px;
+    height: 45px;
+    width: 45px; }
+    .header__arrow-top:hover, .header__arrow-top:focus {
+      background-color: transparent;
+      border-color: #004cff; }
+      .header__arrow-top:hover .header__arrow-svg path, .header__arrow-top:focus .header__arrow-svg path {
+        fill: #004cff; }
+  .header__arrow-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 20px;
+    width: 18px;
+    transform: translate(-50%, -50%);
+    transition: all .4s ease-in-out; }
+    .header__arrow-svg path {
+      fill: #fff;
+      transition: all .4s ease-in-out; }
+
+@media screen and (max-width: 1380px) {
+  .header__container {
+    padding-top: 30px; }
+  .header__slider-content {
+    font-size: 5.2rem; }
+  .header__slider-button-wrapper {
+    padding-top: 45px; }
+  .header__slider-button {
+    font-size: 1.6rem;
+    padding: 15px 35px; }
+  .header__arrow-top-wrapper {
+    bottom: 100px;
+    right: 75px; } }
+
+@media screen and (max-width: 1090px) {
+  .header {
+    position: relative; }
+    .header__container {
+      padding-top: 20px;
+      width: 100%; } }
+
+.discounts {
+  padding-bottom: 45px;
+  padding-top: 45px; }
+  .discounts-list {
+    margin-left: -22px;
+    margin-right: -22px; }
+    .discounts-list__item {
+      color: #fff;
+      position: relative;
+      height: 402px;
+      margin-bottom: 44px;
+      margin-left: 22px;
+      margin-right: 22px;
+      width: calc(33.333% - 44px); }
+      .discounts-list__item-image {
+        height: 100%;
+        object-fit: cover;
+        object-position: center; }
+      .discounts-list__item-cover {
+        color: inherit;
+        display: block;
+        opacity: 0;
+        transition: all .4s ease-in-out; }
+        .discounts-list__item-cover:hover, .discounts-list__item-cover:focus {
+          opacity: 1; }
+      .discounts-list__item-title {
+        color: inherit;
+        font-family: "Teko-Medium";
+        font-size: 6.8rem;
+        position: absolute;
+        top: 100px;
+        left: 145px;
+        line-height: 0.9;
+        max-width: 370px; }
+      .discounts-list__item-description {
+        color: inherit;
+        font-family: "Teko-Bold";
+        font-size: 7.8rem;
+        line-height: 0.9;
+        position: absolute;
+        bottom: 75px;
+        right: 65px;
+        width: 150px; }
+        .discounts-list__item-description span {
+          font-family: "Teko-Medium";
+          font-size: 4.3rem; }
+    .discounts-list__item[data-order="1"] {
+      width: calc(66.666% - 44px); }
+    .discounts-list__item[data-order="4"] {
+      width: calc(66.666% - 44px); }
+
+.products {
+  font-size: 2.1rem;
+  padding-bottom: 13rem; }
+  .products__header {
+    border-bottom: 2px solid #b2b2b2;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    text-align: center; }
+  .products__title {
+    font-family: "Teko-Bold";
+    font-size: 5.3rem;
+    text-transform: uppercase;
+    line-height: 2.3; }
+  .products__navigation-list {
+    font-family: "Montserrat-SemiBold"; }
+  .products__navigation-link {
+    padding-left: 23px;
+    padding-right: 23px; }
+  .products-list {
+    color: #262626;
+    padding-top: 75px;
+    margin-right: -11px;
+    margin-left: -11px; }
+    .products-list__item {
+      background-color: #fff;
+      margin-right: 11px;
+      margin-left: 11px;
+      text-align: center;
+      width: calc(33.333% - 22px); }
+      .products-list__item-image {
+        padding-top: 45px;
+        padding-bottom: 40px;
+        margin: 0 auto; }
+      .products-list__item-desc {
+        font-family: "Montserrat-SemiBold";
+        padding-bottom: 30px;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 35px; }
+      .products-list__item-cost {
+        color: #004cff;
+        font-family: "Montserrat-Bold";
+        font-size: 3rem; }
+
+.discounts-2-list {
+  margin-right: -22px;
+  margin-left: -22px;
+  height: 529px; }
+  .discounts-2-list__item {
+    margin-right: 22px;
+    margin-left: 22px; }
+  .discounts-2-list__item[data-order="1"] {
+    width: calc(40% - 44px); }
+    .discounts-2-list__item[data-order="1"]-image {
+      object-fit: cover;
+      object-position: center;
+      height: 100%; }
+  .discounts-2-list__item[data-order="2"] {
+    width: calc(60% - 44px); }
+
+/*TEKO FONT*/
+@font-face {
+  font-family: "Teko-Medium";
+  src: url("../fonts/Teko/Teko-Medium/Teko-Medium.eot");
+  src: url("../fonts/Teko/Teko-Medium/Teko-Medium.eot") format("embedded-opentype"), url("../fonts/Teko/Teko-Medium/Teko-Medium.ttf") format("truetype"), url("../fonts/Teko/Teko-Medium/Teko-Medium.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Teko-Regular";
+  src: url("../fonts/Teko/Teko-Regular/Teko-Regular.eot");
+  src: url("../fonts/Teko/Teko-Regular/Teko-Regular.eot") format("embedded-opentype"), url("../fonts/Teko/Teko-Regular/Teko-Regular.ttf") format("truetype"), url("../fonts/Teko/Teko-Regular/Teko-Regular.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Teko-SemiBold";
+  src: url("../fonts/Teko/Teko-SemiBold/Teko-SemiBold.eot");
+  src: url("../fonts/Teko/Teko-SemiBold/Teko-SemiBold.eot") format("embedded-opentype"), url("../fonts/Teko/Teko-SemiBold/Teko-SemiBold.ttf") format("truetype"), url("../fonts/Teko/Teko-SemiBold/Teko-SemiBold.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Teko-Bold";
+  src: url("../fonts/Teko/Teko-Bold/Teko-Bold.eot");
+  src: url("../fonts/Teko/Teko-Bold/Teko-Bold.eot") format("embedded-opentype"), url("../fonts/Teko/Teko-Bold/Teko-Bold.ttf") format("truetype"), url("../fonts/Teko/Teko-Bold/Teko-Bold.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+/*MONTSERRAT FONT*/
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("../fonts/Montserrat/Montserrat-Medium/Montserrat-Medium.eot");
+  src: url("../fonts/Montserrat/Montserrat-Medium/Montserrat-Medium.eot") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Medium/Montserrat-Medium.ttf") format("truetype"), url("../fonts/Montserrat/Montserrat-Medium/Montserrat-Medium.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.eot");
+  src: url("../fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.eot") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.ttf") format("truetype"), url("../fonts/Montserrat/Montserrat-Regular/Montserrat-Regular.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url("../fonts/Montserrat/Montserrat-SemiBold/Montserrat-SemiBold.eot");
+  src: url("../fonts/Montserrat/Montserrat-SemiBold/Montserrat-SemiBold.eot") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-SemiBold/Montserrat-SemiBold.ttf") format("truetype"), url("../fonts/Montserrat/Montserrat-SemiBold/Montserrat-SemiBold.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.eot");
+  src: url("../fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.eot") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.ttf") format("truetype"), url("../fonts/Montserrat/Montserrat-Bold/Montserrat-Bold.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  src: url("../fonts/Montserrat/Montserrat-ExtraBold/Montserrat-ExtraBold.eot");
+  src: url("../fonts/Montserrat/Montserrat-ExtraBold/Montserrat-ExtraBold.eot") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-ExtraBold/Montserrat-ExtraBold.ttf") format("truetype"), url("../fonts/Montserrat/Montserrat-ExtraBold/Montserrat-ExtraBold.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }

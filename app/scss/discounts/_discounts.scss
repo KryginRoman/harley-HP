@@ -1,0 +1,61 @@
+.discounts {
+    padding-bottom: 45px;
+    padding-top: 45px;
+    &-list {
+        margin-left: -22px;
+        margin-right: -22px;
+        &__item {
+            color: $lightTextColor;
+            position: relative;
+            height: 402px;
+            margin-bottom: 44px;
+            margin-left: 22px;
+            margin-right: 22px;
+            width: calc(33.333% - 44px);
+            &-image {
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+            &-cover {
+                color: inherit;
+                display: block;
+                opacity: 0;
+                transition: all .4s ease-in-out;
+                &:hover, &:focus {
+                    opacity: 1;
+                }
+            }
+            &-title {
+                color: inherit;
+                font-family: "Teko-Medium";
+                font-size: 6.8rem;
+                position: absolute;
+                top: 100px;
+                left: 145px;
+                line-height: 0.9;
+                max-width: 370px;
+            }
+            &-description {
+                color: inherit;
+                font-family: "Teko-Bold";
+                font-size: 7.8rem;
+                line-height: 0.9;
+                position: absolute;
+                bottom: 75px;
+                right: 65px;
+                width: 150px;
+                span {
+                    font-family: "Teko-Medium";
+                    font-size: 4.3rem;
+                }
+            }
+        }
+        &__item[data-order="1"] {
+            width: calc(66.666% - 44px);
+        }
+        &__item[data-order="4"] {
+            width: calc(66.666% - 44px);
+        }
+    }
+}

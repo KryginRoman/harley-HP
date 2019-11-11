@@ -1,0 +1,112 @@
+@import "_header-nav";
+
+.header {
+    position: relative;
+    &__container {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        padding-top: 40px;
+        transform: translateX(-50%);
+        width: 1090px;
+    }
+    &__slider {
+        &-item {
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        &-item[data-order="1"] {
+            background-image: url(../images/slider_bg/slider-bg1.jpg);
+        }
+        &-content {
+            font-family: "Teko-Bold";
+            font-size: 6.8rem;
+            letter-spacing: 2.73px;
+            line-height: 1.05;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &-button-wrapper {
+            padding-top: 65px;
+        }
+        &-button {
+            border-color: $lightTextColor;
+            font-family: "Montserrat-SemiBold";
+            font-size: 1.8rem;
+            padding: 20px 40px;
+            &:hover {
+                background-color: $lightTextColor;
+                border-color: $accentColor;
+            }
+        }
+    }
+    &__arrow-top-wrapper {
+        position: absolute;
+        bottom: 125px;
+        right: 100px;
+    }
+    &__arrow-top {
+        background-color: $accentColor;
+        border-radius: 8px;
+        height: 45px;
+        width: 45px;
+        &:hover, &:focus {
+            background-color: transparent;
+            border-color: $accentColor;
+            .header__arrow-svg {
+                path {
+                    fill: $accentColor;
+                }
+            }
+        }
+    }
+    &__arrow-svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 20px;
+        width: 18px;
+        transform: translate(-50%, -50%);
+        transition: all .4s ease-in-out;
+        path {
+            fill: #fff;
+            transition: all .4s ease-in-out;
+        }
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .header {
+        &__container {
+            padding-top: 30px;
+        }
+        &__slider {
+            &-content {
+                font-size: 5.2rem;
+            }
+            &-button-wrapper {
+                padding-top: 45px;
+            }
+            &-button {
+                font-size: 1.6rem;
+                padding: 15px 35px;
+            }
+        }
+        &__arrow-top-wrapper {
+            bottom: 100px;
+            right: 75px;
+        }
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    .header {
+        position: relative;
+        &__container {
+            padding-top: 20px;
+            width: 100%
+        }
+    }
+}

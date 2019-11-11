@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 ,h2, h3, h4, h5, h6, ul, p, figure, body {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: $themeColor;
+    color: $lightTextColor;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1380px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.small-container {
+    margin: 0 auto;
+    max-width: 1090px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.link, .button {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+    &:hover, &:focus {
+        color: $accentColor;
+    }
+}
+
+.button {
+    border: 5px solid transparent;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.cover {
+    background-color: rgba(#004cff, .75);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
