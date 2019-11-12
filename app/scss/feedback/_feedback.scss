@@ -1,0 +1,53 @@
+.feedback {
+    color: $lightTextColor;
+    &__container {
+        background-image: url(../images/discounts/form-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 550px;
+    }
+    &__content {
+        position: relative;
+        text-align: center;
+        width: 900px;
+        z-index: 9;
+    }
+    &__discount {
+        font-family: "Teko-Bold";
+        font-size: 9.675rem;
+        line-height: 1.51;
+        text-transform: uppercase;
+        padding-bottom: 40px;
+    }
+    &__form {
+        display: flex;
+        height: 62px;
+        width: 100%;
+        &-email {
+            color: #707070;
+            font-family: "Montserrat-Regular";
+            font-size: 1.6rem;
+            padding-bottom: 25px;
+            padding-left: 45px;
+            padding-right: 45px;
+            padding-top: 25px;
+            width: 80%;
+        }
+        &-button {
+            background-color: $accentColor;
+            color: inherit;
+            font-family: "Montserrat-SemiBold";
+            font-size: 1.9rem;
+            width: 20%;
+            &:hover, &:focus {
+                background-color: $lightTextColor;
+                border-color: $accentColor;
+            }
+        }
+    }
+}

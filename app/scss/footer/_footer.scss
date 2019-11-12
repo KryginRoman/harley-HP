@@ -1,0 +1,59 @@
+.footer {
+    color: $lightTextColor;
+    font-family: "Montserrat-Regular";
+    font-size: 1.875rem;
+    line-height: 1.8;
+    padding-top: 115px;
+    margin: 0 auto;
+    max-width: 1305px;
+    &-content {
+        padding-bottom: 65px;
+    }
+    &-list {
+        justify-content: space-between;
+        &__item {
+            width: 25%;
+            &-title {
+                font-family: "Montserrat-SemiBold";
+                font-size: 2.475rem;
+                line-height: 1.21;
+                padding-bottom: 30px;
+            }
+        }
+    }
+    &-about {
+        &__text {
+            padding-bottom: 50px;
+        }
+        &__contacts {
+            &-action {
+                font-family: "Montserrat-SemiBold";
+                font-size: 2.475rem;
+                line-height: 1.21;
+                padding-bottom: 20px;
+            }
+            &-item {
+                &:not(:last-child) {
+                    margin-right: 15px;
+                }
+            }
+            &-link {
+                background-color: $accentColor;
+                border-radius: 50%;
+                position: relative;
+                height: 50px;
+                width: 50px;
+            }
+        }
+    }
+    &-requisites {
+        &__logo {
+            padding-bottom: 30px;
+        }
+        &__adress {
+            span {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.photogalery {
+    max-width: 1440px;
+    min-height: 480px;
+    &-list {
+        &__item {
+            width: 33.333%;
+            &-image {
+                object-fit: cover;
+                object-position: center;
+                height: 100%;
+            }
+        }
+    }
+}

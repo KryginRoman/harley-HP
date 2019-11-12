@@ -1,3 +1,7 @@
+.discounts-2 {
+    padding-bottom: 44px;
+}
+
 .discounts-2-list {
     margin-right: -22px;
     margin-left: -22px;
@@ -5,14 +9,14 @@
     &__item {
         margin-right: 22px;
         margin-left: 22px;
-    }
-    &__item[data-order="1"] {
-        width: calc(40% - 44px);
         &-image {
             object-fit: cover;
             object-position: center;
             height: 100%;
         }
+    }
+    &__item[data-order="1"] {
+        width: calc(40% - 44px);
     }
     &__item[data-order="2"] {
         width: calc(60% - 44px);
