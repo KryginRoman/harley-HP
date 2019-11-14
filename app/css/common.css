@@ -57,6 +57,10 @@ body {
   max-width: 100%;
   height: auto; }
 
+@media screen and (max-width: 992px) {
+  .button {
+    border: 3px solid transparent; } }
+
 .header__pannel {
   display: flex;
   align-items: center;
@@ -103,6 +107,24 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 15px; } }
+
+@media screen and (max-width: 992px) {
+  .header__pannel {
+    font-size: 1.8rem; }
+  .header__nav-button {
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px; } }
+
+@media screen and (max-width: 768px) {
+  .header__nav-button {
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px; }
+  .header__nav-list {
+    display: none; } }
 
 .header {
   position: relative; }
@@ -182,58 +204,149 @@ body {
     position: relative; }
     .header__container {
       padding-top: 20px;
-      width: 100%; } }
+      width: 100%; }
+    .header__slider-content {
+      font-size: 4.5rem; }
+    .header__slider-button-wrapper {
+      padding-top: 25px; }
+    .header__slider-button {
+      font-size: 1.5rem;
+      padding: 15px 25px; }
+    .header__arrow-top-wrapper {
+      bottom: 60px;
+      right: 35px; } }
+
+@media screen and (max-width: 576px) {
+  .header__slider-content {
+    font-size: 3.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
+  .header__slider-button-wrapper {
+    padding-top: 15px; }
+  .header__arrow-top-wrapper {
+    bottom: 40px;
+    right: 15px; } }
 
 .discounts {
-  padding-bottom: 45px;
-  padding-top: 45px; }
-  .discounts-list {
-    margin-left: -22px;
-    margin-right: -22px; }
-    .discounts-list__item {
-      color: #fff;
-      position: relative;
-      height: 402px;
-      margin-bottom: 44px;
-      margin-left: 22px;
-      margin-right: 22px;
-      width: calc(33.333% - 44px); }
-      .discounts-list__item-image {
-        height: 100%;
-        object-fit: cover;
-        object-position: center; }
-      .discounts-list__item-cover {
-        color: inherit;
-        display: block;
-        opacity: 0;
-        transition: all .4s ease-in-out; }
-        .discounts-list__item-cover:hover, .discounts-list__item-cover:focus {
-          opacity: 1; }
-      .discounts-list__item-title {
-        color: inherit;
+  padding-bottom: 4.5rem;
+  padding-top: 4.5rem; }
+  .discounts-list__item {
+    color: #fff;
+    position: relative;
+    height: 402px;
+    margin-bottom: 44px;
+    margin-left: 22px;
+    margin-right: 22px;
+    width: calc(33.333% - 44px); }
+    .discounts-list__item-image {
+      height: 100%;
+      object-fit: cover;
+      object-position: center; }
+    .discounts-list__item-cover {
+      color: inherit;
+      display: block;
+      opacity: 0;
+      transition: all .4s ease-in-out; }
+      .discounts-list__item-cover:hover, .discounts-list__item-cover:focus {
+        opacity: 1; }
+    .discounts-list__item-title {
+      color: inherit;
+      font-family: "Teko-Medium";
+      font-size: 6.8rem;
+      position: absolute;
+      top: 100px;
+      left: 145px;
+      line-height: 0.9;
+      max-width: 370px; }
+    .discounts-list__item-description {
+      color: inherit;
+      font-family: "Teko-Bold";
+      font-size: 7.8rem;
+      line-height: 0.9;
+      position: absolute;
+      bottom: 75px;
+      right: 65px;
+      width: 150px; }
+      .discounts-list__item-description span {
         font-family: "Teko-Medium";
-        font-size: 6.8rem;
-        position: absolute;
-        top: 100px;
-        left: 145px;
-        line-height: 0.9;
-        max-width: 370px; }
+        font-size: 4.3rem; }
+  .discounts-list__item[data-order="1"] {
+    width: calc(66.666% - 44px); }
+  .discounts-list__item[data-order="4"] {
+    width: calc(66.666% - 44px); }
+
+@media screen and (max-width: 1200px) {
+  .discounts-list__item {
+    margin-bottom: 22px;
+    margin-left: 11px;
+    margin-right: 11px;
+    width: calc(33.333% - 22px); }
+    .discounts-list__item-title {
+      font-size: 6.2rem;
+      position: absolute;
+      top: 80px;
+      left: 30px; }
+    .discounts-list__item-description {
+      font-size: 7.2rem;
+      bottom: 65px;
+      right: 25px; }
+      .discounts-list__item-description span {
+        font-size: 4rem; }
+  .discounts-list__item[data-order="1"] {
+    width: calc(66.666% - 22px); }
+  .discounts-list__item[data-order="4"] {
+    width: calc(66.666% - 22px); } }
+
+@media screen and (max-width: 992px) {
+  .discounts-list__item-title {
+    font-size: 5.5rem;
+    top: 60px;
+    left: 15px; }
+  .discounts-list__item-description {
+    font-size: 6.5rem;
+    bottom: 45px;
+    right: 15px; }
+    .discounts-list__item-description span {
+      font-size: 4rem; } }
+
+@media screen and (max-width: 768px) {
+  .discounts {
+    padding-bottom: 3.5rem;
+    padding-top: 3.5rem; }
+    .discounts-list__item {
+      height: 302px; }
+      .discounts-list__item-title {
+        font-size: 4rem;
+        max-width: 270px;
+        top: 30px; }
       .discounts-list__item-description {
-        color: inherit;
-        font-family: "Teko-Bold";
-        font-size: 7.8rem;
-        line-height: 0.9;
-        position: absolute;
-        bottom: 75px;
-        right: 65px;
-        width: 150px; }
+        font-size: 5rem;
+        bottom: 25px; }
         .discounts-list__item-description span {
-          font-family: "Teko-Medium";
-          font-size: 4.3rem; }
-    .discounts-list__item[data-order="1"] {
-      width: calc(66.666% - 44px); }
-    .discounts-list__item[data-order="4"] {
-      width: calc(66.666% - 44px); }
+          font-size: 3rem; } }
+
+@media screen and (max-width: 576px) {
+  .discounts-list__item {
+    height: 202px; }
+    .discounts-list__item-title {
+      font-size: 3.5rem;
+      max-width: 200px; }
+    .discounts-list__item-description {
+      font-size: 4.5rem; }
+      .discounts-list__item-description span {
+        font-size: 2.8rem; } }
+
+@media screen and (max-width: 480px) {
+  .discounts-list__item {
+    width: calc(100% - 22px); }
+    .discounts-list__item-image {
+      width: 100%; }
+  .discounts-list__item[data-order="1"] {
+    width: calc(100% - 22px); }
+  .discounts-list__item[data-order="4"] {
+    width: calc(100% - 22px); } }
 
 .products {
   font-size: 2.1rem;
@@ -270,7 +383,9 @@ body {
       .products-list__item-image {
         padding-top: 45px;
         padding-bottom: 40px;
-        margin: 0 auto; }
+        object-fit: contain;
+        margin: 0 auto;
+        height: 100%; }
       .products-list__item-desc {
         font-family: "Montserrat-SemiBold";
         padding-bottom: 30px;
@@ -282,13 +397,79 @@ body {
         font-family: "Montserrat-Bold";
         font-size: 3rem; }
 
+@media screen and (max-width: 992px) {
+  .products {
+    font-size: 1.8rem;
+    padding-bottom: 11rem; }
+    .products__header {
+      padding-bottom: 40px; }
+    .products__title {
+      font-size: 5rem; }
+    .products__navigation-link {
+      padding-left: 15px;
+      padding-right: 15px; }
+    .products-list {
+      padding-top: 65px; }
+      .products-list__item-image {
+        padding-top: 35px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 30px; }
+      .products-list__item-desc {
+        padding-bottom: 25px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px; }
+      .products-list__item-cost {
+        font-size: 2.7rem; } }
+
+@media screen and (max-width: 768px) {
+  .products {
+    font-size: 1.8rem;
+    padding-bottom: 9rem; }
+    .products__title {
+      font-size: 4.6em; }
+    .products-list {
+      padding-top: 55px; }
+      .products-list__item {
+        width: calc(50% - 22px);
+        margin-bottom: 22px; }
+        .products-list__item-image {
+          padding-top: 15px;
+          padding-left: 5px;
+          padding-right: 5px;
+          padding-bottom: 15px; }
+        .products-list__item-desc {
+          padding-bottom: 15px;
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-top: 15px; }
+        .products-list__item-cost {
+          font-size: 2.4rem; } }
+
+@media screen and (max-width: 576px) {
+  .products {
+    font-size: 1.6rem; }
+    .products__title {
+      font-size: 4.4rem; }
+    .products__navigation-link {
+      padding-left: 13px;
+      padding-right: 13px; }
+    .products-list {
+      margin-right: 0;
+      margin-left: 0; }
+      .products-list__item {
+        max-width: 340px;
+        margin-right: auto;
+        margin-left: auto;
+        width: calc(100% - 22px); } }
+
 .discounts-2 {
   padding-bottom: 44px; }
 
 .discounts-2-list {
-  margin-right: -22px;
-  margin-left: -22px;
-  height: 529px; }
+  height: 529px;
+  overflow: hidden; }
   .discounts-2-list__item {
     margin-right: 22px;
     margin-left: 22px; }
@@ -300,6 +481,32 @@ body {
     width: calc(40% - 44px); }
   .discounts-2-list__item[data-order="2"] {
     width: calc(60% - 44px); }
+
+@media screen and (max-width: 992px) {
+  .discounts-2-list {
+    height: auto; }
+    .discounts-2-list__item {
+      margin-right: 11px;
+      margin-left: 11px; }
+      .discounts-2-list__item-image {
+        object-fit: cover;
+        object-position: 70% 50%; }
+    .discounts-2-list__item[data-order="1"] {
+      width: calc(40% - 22px); }
+    .discounts-2-list__item[data-order="2"] {
+      width: calc(60% - 22px); } }
+
+@media screen and (max-width: 758px) {
+  .discounts-2-list__item {
+    margin-bottom: 15px; }
+    .discounts-2-list__item-image {
+      width: 100%;
+      object-fit: cover;
+      object-position: center; }
+  .discounts-2-list__item[data-order="1"] {
+    width: calc(100% - 22px); }
+  .discounts-2-list__item[data-order="2"] {
+    width: calc(100% - 22px); } }
 
 .feedback {
   color: #fff; }
@@ -329,6 +536,7 @@ body {
     height: 62px;
     width: 100%; }
     .feedback__form-email {
+      border: none;
       color: #707070;
       font-family: "Montserrat-Regular";
       font-size: 1.6rem;
@@ -340,12 +548,62 @@ body {
     .feedback__form-button {
       background-color: #004cff;
       color: inherit;
+      cursor: pointer;
       font-family: "Montserrat-SemiBold";
       font-size: 1.9rem;
       width: 20%; }
       .feedback__form-button:hover, .feedback__form-button:focus {
         background-color: #fff;
         border-color: #004cff; }
+
+@media screen and (max-width: 1200px) {
+  .feedback__container {
+    min-height: 450px; }
+  .feedback__content {
+    width: 900px; }
+  .feedback__discount {
+    font-size: 7.675rem;
+    padding-bottom: 35px; }
+  .feedback__form {
+    height: 52px; }
+    .feedback__form-email {
+      color: #707070;
+      font-family: "Montserrat-Regular";
+      font-size: 1.6rem;
+      padding-left: 40px;
+      padding-right: 40px; }
+    .feedback__form-button {
+      font-size: 1.8rem; } }
+
+@media screen and (max-width: 992px) {
+  .feedback__content {
+    width: 700px; }
+  .feedback__discount {
+    padding-bottom: 25px; } }
+
+@media screen and (max-width: 768px) {
+  .feedback__content {
+    width: 500px; }
+  .feedback__discount {
+    font-size: 5.675rem; }
+  .feedback__form {
+    height: 42px; }
+    .feedback__form-email {
+      font-size: 1.4rem;
+      padding-bottom: 15px;
+      padding-top: 15px;
+      padding-left: 30px;
+      padding-right: 30px; }
+    .feedback__form-button {
+      font-size: 1.6rem; } }
+
+@media screen and (max-width: 576px) {
+  .feedback__container {
+    min-height: 350px; }
+  .feedback__content {
+    width: 400px; }
+  .feedback-button {
+    font-size: 1.4rem; } }
 
 .services {
   color: #707070;
@@ -390,11 +648,20 @@ body {
   font-family: "Montserrat-Regular";
   font-size: 1.875rem;
   line-height: 1.8;
-  padding-top: 115px;
+  padding-top: 11.5rem;
   margin: 0 auto;
   max-width: 1305px; }
   .footer-content {
-    padding-bottom: 65px; }
+    padding-bottom: 65px;
+    border-bottom: 2px solid #b2b2b2; }
+  .footer-copyright {
+    padding-top: 5rem;
+    padding-bottom: 6.5rem; }
+    .footer-copyright__container {
+      display: flex;
+      justify-content: space-between; }
+    .footer-copyright__navigation-item:not(:last-child) {
+      margin-right: 45px; }
   .footer-list {
     justify-content: space-between; }
     .footer-list__item {
@@ -415,14 +682,37 @@ body {
     margin-right: 15px; }
   .footer-about__contacts-link {
     background-color: #004cff;
+    border: 5px solid transparent;
     border-radius: 50%;
     position: relative;
     height: 50px;
     width: 50px; }
+    .footer-about__contacts-link:hover, .footer-about__contacts-link:focus {
+      background-color: transparent;
+      border-color: #004cff; }
+  .footer-about__contacts-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
   .footer-requisites__logo {
     padding-bottom: 30px; }
   .footer-requisites__adress span {
     display: block; }
+  .footer-requisites__cards {
+    padding-top: 30px; }
+    .footer-requisites__cards-item:not(:last-child) {
+      margin-right: 22px; }
+    .footer-requisites__cards-link {
+      background-color: #f8f8f8;
+      position: relative;
+      height: 42px;
+      width: 68px; }
+    .footer-requisites__cards-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
 
 /*TEKO FONT*/
 @font-face {

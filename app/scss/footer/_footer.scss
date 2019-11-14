@@ -3,11 +3,23 @@
     font-family: "Montserrat-Regular";
     font-size: 1.875rem;
     line-height: 1.8;
-    padding-top: 115px;
+    padding-top: 11.5rem;
     margin: 0 auto;
     max-width: 1305px;
     &-content {
         padding-bottom: 65px;
+        border-bottom: 2px solid #b2b2b2;;
+    }
+    &-copyright {
+        padding-top: 5rem;
+        padding-bottom: 6.5rem;
+        &__container {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__navigation-item:not(:last-child) {
+            margin-right: 45px;
+        }
     }
     &-list {
         justify-content: space-between;
@@ -39,10 +51,21 @@
             }
             &-link {
                 background-color: $accentColor;
+                border: 5px solid transparent;
                 border-radius: 50%;
                 position: relative;
                 height: 50px;
                 width: 50px;
+                &:hover, &:focus {
+                    background-color: transparent;
+                    border-color: $accentColor;
+                }
+            }
+            &-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
     }
@@ -53,6 +76,24 @@
         &__adress {
             span {
                 display: block;
+            }
+        }
+        &__cards {
+            padding-top: 30px;
+            &-item:not(:last-child) {
+                margin-right: 22px;
+            }
+            &-link {
+                background-color: #f8f8f8;
+                position: relative;
+                height: 42px;
+                width: 68px;
+            }
+            &-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
     }

@@ -43,8 +43,7 @@
 @media screen and (max-width: 1200px) {
     .header__pannel {
         font-size: 2rem;
-    }
-    
+    } 
     .header__nav {
         &-link {
             padding-left: 20px;
@@ -55,6 +54,34 @@
             padding-left: 30px;
             padding-right: 30px;
             padding-top: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header__pannel {
+        font-size: 1.8rem;
+    }  
+    .header__nav {
+        &-button {
+            padding-bottom: 15px;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header__nav {
+        &-button {
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+        }
+        &-list {
+            display: none;
         }
     }
 }

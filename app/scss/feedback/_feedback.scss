@@ -29,6 +29,7 @@
         height: 62px;
         width: 100%;
         &-email {
+            border: none;
             color: #707070;
             font-family: "Montserrat-Regular";
             font-size: 1.6rem;
@@ -41,6 +42,7 @@
         &-button {
             background-color: $accentColor;
             color: inherit;
+            cursor: pointer;
             font-family: "Montserrat-SemiBold";
             font-size: 1.9rem;
             width: 20%;
@@ -48,6 +50,83 @@
                 background-color: $lightTextColor;
                 border-color: $accentColor;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .feedback {
+        &__container {
+            min-height: 450px;
+        }
+        &__content {
+            width: 900px;
+        }
+        &__discount {
+            font-size: 7.675rem;
+            padding-bottom: 35px;
+        }
+        &__form {
+            height: 52px;
+            &-email {
+                color: #707070;
+                font-family: "Montserrat-Regular";
+                font-size: 1.6rem;
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            &-button {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .feedback {
+        &__content {
+            width: 700px;
+        }
+        &__discount {
+            padding-bottom: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .feedback {
+        &__content {
+            width: 500px;
+        }
+        &__discount {
+            font-size: 5.675rem;
+        }
+        &__form {
+            height: 42px;
+            &-email {
+                font-size: 1.4rem;
+                padding-bottom: 15px;
+                padding-top: 15px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            &-button {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .feedback {
+        &__container {
+            min-height: 350px;
+        }
+        &__content {
+            width: 400px;
+        }
+        &-button {
+            font-size: 1.4rem;
         }
     }
 }

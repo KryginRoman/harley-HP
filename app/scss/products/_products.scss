@@ -39,7 +39,9 @@
             &-image {
                 padding-top: 45px;
                 padding-bottom: 40px;
+                object-fit: contain;
                 margin: 0 auto;
+                height: 100%;
             }
             &-desc {
                 font-family: "Montserrat-SemiBold";
@@ -52,6 +54,102 @@
                 color: $accentColor;
                 font-family: "Montserrat-Bold";
                 font-size: 3rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .products {
+        font-size: 1.8rem;
+        padding-bottom: 11rem;
+        &__header {
+            padding-bottom: 40px;
+        }
+        &__title {
+            font-size: 5rem;
+        }
+        &__navigation {
+            &-link {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        &-list {
+            padding-top: 65px;
+            &__item {
+                &-image {
+                    padding-top: 35px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    padding-bottom: 30px;
+                }
+                &-desc {
+                    padding-bottom: 25px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    padding-top: 30px;
+                }
+                &-cost {
+                    font-size: 2.7rem;
+                }
+            }
+        }
+    }  
+}
+
+@media screen and (max-width: 768px) {
+    .products {
+        font-size: 1.8rem;
+        padding-bottom: 9rem;
+        &__title {
+            font-size: 4.6em;
+        }
+        &-list {
+            padding-top: 55px;
+            &__item {
+                width: calc(50% - 22px);
+                margin-bottom: 22px;
+                &-image {
+                    padding-top: 15px;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    padding-bottom: 15px;
+                }
+                &-desc {
+                    padding-bottom: 15px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    padding-top: 15px;
+                }
+                &-cost {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .products {
+        font-size: 1.6rem;
+        &__title {
+            font-size: 4.4rem;
+        }
+        &__navigation {
+            &-link {
+                padding-left: 13px;
+                padding-right: 13px;
+            }
+        }
+        &-list {
+            margin-right: 0;
+            margin-left: 0;
+            &__item {
+                max-width: 340px;
+                margin-right: auto;
+                margin-left: auto;
+                width: calc(100% - 22px);
             }
         }
     }

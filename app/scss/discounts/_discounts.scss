@@ -1,9 +1,9 @@
 .discounts {
-    padding-bottom: 45px;
-    padding-top: 45px;
+    padding-bottom: 4.5rem;
+    padding-top: 4.5rem;
     &-list {
-        margin-left: -22px;
-        margin-right: -22px;
+        // margin-left: -22px;
+        // margin-right: -22px;
         &__item {
             color: $lightTextColor;
             position: relative;
@@ -56,6 +56,124 @@
         }
         &__item[data-order="4"] {
             width: calc(66.666% - 44px);
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .discounts {
+        &-list {
+            &__item {
+                margin-bottom: 22px;
+                margin-left: 11px;
+                margin-right: 11px;
+                width: calc(33.333% - 22px);
+                &-title {
+                    font-size: 6.2rem;
+                    position: absolute;
+                    top: 80px;
+                    left: 30px;
+                }
+                &-description {
+                    font-size: 7.2rem;
+                    bottom: 65px;
+                    right: 25px;
+                    span {
+                        font-size: 4rem;
+                    }
+                }
+            }
+            &__item[data-order="1"] {
+                width: calc(66.666% - 22px);
+            }
+            &__item[data-order="4"] {
+                width: calc(66.666% - 22px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .discounts {
+        &-list {
+            &__item {
+                &-title {
+                    font-size: 5.5rem;
+                    top: 60px;
+                    left: 15px;
+                }
+                &-description {
+                    font-size: 6.5rem;
+                    bottom: 45px;
+                    right: 15px;
+                    span {
+                        font-size: 4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .discounts {
+        padding-bottom: 3.5rem;
+        padding-top: 3.5rem;
+        &-list {
+            &__item {
+                height: 302px;
+                &-title {
+                    font-size: 4rem;
+                    max-width: 270px;
+                    top: 30px;
+                }
+                &-description {
+                    font-size: 5rem;
+                    bottom: 25px;
+                    span {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .discounts {
+        &-list {
+            &__item {
+                height: 202px;
+                &-title {
+                    font-size: 3.5rem;
+                    max-width: 200px;
+                }
+                &-description {
+                    font-size: 4.5rem;
+                    span {
+                        font-size: 2.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .discounts {
+        &-list {
+            &__item {
+                width: calc(100% - 22px);
+                &-image {
+                    width: 100%;
+                }
+            }
+            &__item[data-order="1"] {
+                width: calc(100% - 22px);
+            }
+            &__item[data-order="4"] {
+                width: calc(100% - 22px);
+            }
         }
     }
 }
