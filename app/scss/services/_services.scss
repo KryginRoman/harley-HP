@@ -31,3 +31,46 @@
         }
     }
 }
+
+@media screen and (max-width: 992px) {
+    .services {
+        padding-bottom: 8.5rem;
+        padding-top: 8.5rem;
+        &-list {
+            &__item {
+                padding: 25px;
+                &-icon {
+                    padding-right: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services {
+        padding-bottom: 7rem;
+        padding-top: 7rem;
+        &-list {
+            &__item {
+                width: calc(50% - 22px);
+                margin-bottom: 22px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .services {
+        padding-bottom: 6rem;
+        padding-top: 6rem;
+        &-list {
+            &__item {
+                max-width: 340px;
+                margin-left: auto;
+                margin-right: auto;
+                width: calc(100% - 22px);
+            }
+        }
+    }
+}

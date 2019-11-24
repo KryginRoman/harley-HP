@@ -633,15 +633,53 @@ body {
         line-height: 1.5;
         padding-top: 10px; }
 
-.photogalery {
-  max-width: 1440px;
-  min-height: 480px; }
+@media screen and (max-width: 992px) {
+  .services {
+    padding-bottom: 8.5rem;
+    padding-top: 8.5rem; }
+    .services-list__item {
+      padding: 25px; }
+      .services-list__item-icon {
+        padding-right: 25px; } }
+
+@media screen and (max-width: 768px) {
+  .services {
+    padding-bottom: 7rem;
+    padding-top: 7rem; }
+    .services-list__item {
+      width: calc(50% - 22px);
+      margin-bottom: 22px; } }
+
+@media screen and (max-width: 576px) {
+  .services {
+    padding-bottom: 6rem;
+    padding-top: 6rem; }
+    .services-list__item {
+      max-width: 340px;
+      margin-left: auto;
+      margin-right: auto;
+      width: calc(100% - 22px); } }
+
+.photogalery-list__item {
+  min-height: 480px;
+  width: 33.333%; }
+  .photogalery-list__item-image {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%; }
+
+@media screen and (max-width: 992px) {
   .photogalery-list__item {
-    width: 33.333%; }
-    .photogalery-list__item-image {
-      object-fit: cover;
-      object-position: center;
-      height: 100%; }
+    min-height: 380px; } }
+
+@media screen and (max-width: 768px) {
+  .photogalery-list__item {
+    min-height: 280px; } }
+
+@media screen and (max-width: 576px) {
+  .photogalery-list__item {
+    width: 100%; } }
 
 .footer {
   color: #fff;
@@ -663,14 +701,20 @@ body {
     .footer-copyright__navigation-item:not(:last-child) {
       margin-right: 45px; }
   .footer-list {
+    flex-wrap: nowrap;
     justify-content: space-between; }
     .footer-list__item {
-      width: 25%; }
+      max-width: 250px;
+      flex-grow: 1; }
       .footer-list__item-title {
         font-family: "Montserrat-SemiBold";
         font-size: 2.475rem;
         line-height: 1.21;
         padding-bottom: 30px; }
+      .footer-list__item:last-child, .footer-list__item:first-child {
+        flex-shrink: 0; }
+      .footer-list__item:not(:last-child) {
+        margin-right: 8rem; }
   .footer-about__text {
     padding-bottom: 50px; }
   .footer-about__contacts-action {
@@ -713,6 +757,31 @@ body {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
+
+@media screen and (max-width: 992px) {
+  .footer-copyright {
+    padding-top: 4rem;
+    padding-bottom: 5rem; }
+    .footer-copyright__navigation-item:not(:last-child) {
+      margin-right: 15px; }
+  .footer-list {
+    flex-wrap: wrap;
+    justify-content: flex-start; }
+    .footer-list__item {
+      margin-bottom: 5rem; }
+      .footer-list__item:not(:last-child) {
+        margin-right: 3rem; } }
+
+@media screen and (max-width: 650px) {
+  .footer-copyright {
+    padding-top: 3rem;
+    padding-bottom: 4rem; }
+    .footer-copyright__container {
+      flex-direction: column;
+      align-items: center; }
+  .footer-list {
+    justify-content: center;
+    text-align: center; } }
 
 /*TEKO FONT*/
 @font-face {

@@ -1,14 +1,44 @@
 .photogalery {
-    max-width: 1440px;
-    min-height: 480px;
     &-list {
         &__item {
+            min-height: 480px;
             width: 33.333%;
             &-image {
                 object-fit: cover;
                 object-position: center;
                 height: 100%;
+                width: 100%;
             }
         }
     }
+}
+
+@media screen and (max-width: 992px) {
+    .photogalery {
+        &-list {
+            &__item {
+                min-height: 380px;
+            }
+        }
+    }    
+}
+
+@media screen and (max-width: 768px) {
+    .photogalery {
+        &-list {
+            &__item {
+                min-height: 280px;
+            }
+        }
+    }    
+}
+
+@media screen and (max-width: 576px) {
+    .photogalery {
+        &-list {
+            &__item {
+                width: 100%;
+            }
+        }
+    }    
 }

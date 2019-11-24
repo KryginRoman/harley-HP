@@ -22,14 +22,22 @@
         }
     }
     &-list {
+        flex-wrap: nowrap;
         justify-content: space-between;
         &__item {
-            width: 25%;
+            max-width: 250px;
+            flex-grow: 1;
             &-title {
                 font-family: "Montserrat-SemiBold";
                 font-size: 2.475rem;
                 line-height: 1.21;
                 padding-bottom: 30px;
+            }
+            &:last-child, &:first-child {
+                flex-shrink: 0;
+            }
+            &:not(:last-child) {
+                margin-right: 8rem;
             }
         }
     }
@@ -95,6 +103,45 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
+        }
+    }
+}
+
+@media screen and (max-width: 992px)  {
+    .footer {
+        &-copyright {
+            padding-top: 4rem;
+            padding-bottom: 5rem;
+            &__navigation-item:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+        &-list {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            &__item {
+                margin-bottom: 5rem;
+                &:not(:last-child) {
+                    margin-right: 3rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .footer {
+        &-copyright {
+            padding-top: 3rem;
+            padding-bottom: 4rem;
+            &__container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        &-list {
+            justify-content: center;
+            text-align: center;
         }
     }
 }
