@@ -8,6 +8,11 @@
 
 .header__nav {
     color: #404040;
+    &-list {
+        &_mobile {
+            display: block;
+        }
+    }
     &-item {
         position: relative;
         &:not(:last-child)::after {
@@ -36,6 +41,54 @@
         &:hover, &:focus {
             background-color: transparent;
             border-color: $accentColor;
+        }
+    }
+    &-toggle {
+        background-color: $lightTextColor;
+        border: 2px solid $accentColor;
+        border-radius: 50%;
+        box-shadow: 2px 3px 24px -3px rgba(0,0,0,0.37);
+        display: none;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        &-line {
+            background-color: $accentColor;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 2px;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            transition: all .4s ease-in-out;
+            &:first-child {
+                margin-top: -5px;
+            }
+            &:last-child {
+                margin-top: 5px;
+            }
+        }
+        &:hover, &:focus {
+            background-color: $accentColor;
+            border: 2px solid $lightTextColor;
+            .header__nav-toggle-line {
+                background-color: $lightTextColor;
+            }
+        }
+        &_active {
+            .header__nav-toggle-line {
+                height: 0;
+                &:first-child, &:last-child {
+                    height: 2px;
+                    margin-top: 0;
+                }
+                &:first-child {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+                &:last-child {
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+            }
         }
     }
 }
@@ -73,12 +126,26 @@
 }
 
 @media screen and (max-width: 768px) {
+    .header__pannel {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: "Teko-SemiBold";
+        font-size: 2.3rem;
+    }
     .header__nav {
+        order: 2;
         &-button {
             padding-bottom: 10px;
             padding-left: 20px;
             padding-right: 20px;
             padding-top: 10px;
+            &-wrapper {
+                order: 1;
+            }
+        }
+        &-toggle {
+            display: block;
         }
         &-list {
             display: none;
